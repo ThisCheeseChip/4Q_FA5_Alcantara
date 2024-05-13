@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number;
+        var check = false;
+
+        while(check == false){
+            number = prompt("Please enter a number.");
+
+            if(isNaN(number) == true){
+                alert("Please enter a valid number.");
+                check = false;
+            }
+            else{
+                check = true;
+            }
+        }
+
+        document.write("Number inputted: " + number + "<br> <br>");
+
+        if(number%2 == 1){
+            var x = 0;
+            x = Number(number);
+
+            while(x>=1){
+                for(y=0;y<number;y++){
+                    document.write(x + " ");
+                }
+
+                document.write("<br>");
+                x--;
+            }
+        }
+        else{
+            var x = 0;
+            x = Number(number);
+
+            while(x>=1){
+                for(y=0;y<x;y++){
+                    document.write(x + " ");
+                }
+
+                document.write("<br>");
+                x--;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputfield">
+    <button onclick="addfunction()">Add</button>
+    <button onclick="removefunction()">Remove</button>
+    <p id="output"></p>
+
+    <script>
+        var arr = [];
+        var total = "";
+
+        function addfunction(){
+            total = "";
+            var x = document.getElementById("inputfield");
+            arr.push(x.value);
+
+            if(arr.length > 7){
+                removearrfunction();
+            }
+
+            for(y in arr){
+                total = total + arr[y] + " ";
+            }
+
+            document.getElementById("output").innerHTML = total;  
+        }
+
+        function removefunction(){
+            total = "";
+            var x = document.getElementById("inputfield");
+            arr.pop();
+
+            for(y in arr){
+                total = total + arr[y] + " ";
+            }
+
+            document.getElementById("output").innerHTML = total;   
+        }
+
+        function removearrfunction(){
+            arr.shift();
+        }
+    </script>
+</body>
+</html>
